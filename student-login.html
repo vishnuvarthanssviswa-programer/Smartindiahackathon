@@ -11,20 +11,30 @@
 
   <div class="bg-white bg-opacity-90 p-8 rounded-xl shadow-lg w-96">
     <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Student Login</h2>
-    <form class="space-y-4">
+    <!-- Connected to Flask Backend -->
+    <form action="http://127.0.0.1:5000/login/student" method="POST" class="space-y-4">
       <div>
         <label class="block text-gray-700">Student ID</label>
-        <input type="text" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Enter Student ID">
+        <input type="text" name="student_id" required
+          class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          placeholder="Enter Student ID">
       </div>
       <div>
         <label class="block text-gray-700">Password</label>
-        <input type="password" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Enter Password">
+        <input type="password" name="password" required
+          class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          placeholder="Enter Password">
       </div>
       <div>
         <label class="block text-gray-700">Captcha</label>
-        <input type="text" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Enter Captcha">
+        <input type="text" name="captcha" required
+          class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          placeholder="Enter Captcha">
       </div>
-      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Login</button>
+      <button type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+        Login
+      </button>
     </form>
   </div>
 
@@ -33,21 +43,4 @@
     Chat with Us – Support
   </button>
 </body>
-  <form action="http://127.0.0.1:5000/login/student" method="POST" class="space-y-4">
-  <div>
-    <label class="block text-gray-700">Student ID</label>
-    <input type="text" name="student_id" class="w-full border rounded px-3 py-2" placeholder="Enter Student ID" required>
-  </div>
-  <div>
-    <label class="block text-gray-700">Password</label>
-    <input type="password" name="password" class="w-full border rounded px-3 py-2" placeholder="Enter Password" required>
-  </div>
-  <div>
-    <label class="block text-gray-700">Captcha</label>
-    <input type="text" name="captcha" class="w-full border rounded px-3 py-2" placeholder="Enter Captcha" required>
-  </div>
-  <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Login</button>
-</form>
-
 </html>
-
