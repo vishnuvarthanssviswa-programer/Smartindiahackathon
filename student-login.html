@@ -33,4 +33,21 @@
     Chat with Us – Support
   </button>
 </body>
+  <form action="http://127.0.0.1:5000/login/student" method="POST" class="space-y-4">
+  <div>
+    <label class="block text-gray-700">Student ID</label>
+    <input type="text" name="student_id" class="w-full border rounded px-3 py-2" placeholder="Enter Student ID" required>
+  </div>
+  <div>
+    <label class="block text-gray-700">Password</label>
+    <input type="password" name="password" class="w-full border rounded px-3 py-2" placeholder="Enter Password" required>
+  </div>
+  <div>
+    <label class="block text-gray-700">Captcha</label>
+    <input type="text" name="captcha" class="w-full border rounded px-3 py-2" placeholder="Enter Captcha" required>
+  </div>
+  <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Login</button>
+</form>
+
 </html>
+
